@@ -85,7 +85,7 @@ public class ArbolProductos {
         recorridoEnOrden(raiz);
     }
 
-    // Recorrido EnOrden del árbol.
+    // Recorrido en orden del árbol.
         private void recorridoEnOrden(NodoArbol nodo) {
 
         if (nodo != null) {
@@ -95,8 +95,6 @@ public class ArbolProductos {
             System.out.println(nodo.getProducto());
 
             recorridoEnOrden(nodo.getDerecho());
-
         }
     }
-
 }
