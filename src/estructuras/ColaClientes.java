@@ -4,7 +4,6 @@ import modelo.Cliente;
 
 /**
  * Cola de prioridad implementada con inserción ordenada.
- *
  * El frente de la cola siempre contiene al cliente con la prioridad
  * más alta (3 = premium, 2 = afiliado, 1 = básico). En caso de empate
  * de prioridad, se respeta el orden de llegada (FIFO): el que entró
