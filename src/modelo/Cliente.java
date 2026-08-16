@@ -12,13 +12,15 @@ public class Cliente {
     private String identificacion;
     private int prioridad;
     private ListaProductos carrito;
+    private String ubicacion;
 
     // Constructor
-    public Cliente(String nombre, String identificacion, int prioridad) {
+    public Cliente(String nombre, String identificacion, int prioridad, String ubicacion) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         setPrioridad(prioridad);
         this.carrito = new ListaProductos();
+        this.ubicacion = ubicacion;
     }
 
     // Getters y Setters
@@ -62,6 +64,14 @@ public class Cliente {
         this.carrito = carrito;
     }
 
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
     /**
      * Agrega un producto al carrito personal del cliente.
      */
@@ -87,6 +97,7 @@ public class Cliente {
     public String toString() {
         return "Cliente: " + nombre +
                 "\nIdentificación: " + identificacion +
-                "\nPrioridad: " + prioridad + " (" + getTipoCliente() + ")";
+                "\nPrioridad: " + prioridad + " (" + getTipoCliente() + ")" +
+                "\nUbicación: " + ubicacion;
     }
 }
